@@ -1,0 +1,20 @@
+# SPDX-License-Identifier: Apache-2.0
+
+sample:
+  description: Demonstrate TinyUSB FIFO buffers in Zephyr.
+  name: TinyUSB FIFO
+common:
+  tags:
+    - tinyusb
+  integration_platforms:
+    - native_sim
+  harness: console
+  harness_config:
+    type: one_line
+    regex:
+      - "TinyUSB FIFO transferred .*"
+tests:
+  sample.modules.tinyusb.fifo:
+    tags:
+      - modules
+      - tinyusb

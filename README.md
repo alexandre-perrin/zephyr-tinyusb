@@ -31,6 +31,16 @@ The application must provide a `tusb_config.h` file.
 Set `TINYUSB_CONFIG_DIR` to its directory before
 `find_package(Zephyr)` in the application CMake file.
 
+## Sample
+
+The FIFO sample demonstrates TinyUSB's bounded FIFO API
+and runs without a USB controller.
+Run it on `native_sim` with Twister:
+
+```sh
+west twister -p native_sim -T samples/fifo
+```
+
 ## Tests
 
 From a configured Zephyr workspace,
