@@ -1,0 +1,4 @@
+name: zephyr_tinyusb
+build:
+  cmake: .
+  kconfig: Kconfig
