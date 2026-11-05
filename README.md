@@ -23,3 +23,19 @@ manifest:
 
 Then run `west update` to fetch the bridge
 and initialize its upstream submodule.
+
+## Configuration
+
+Enable `CONFIG_TINYUSB` in the application configuration.
+The application must provide a `tusb_config.h` file.
+Set `TINYUSB_CONFIG_DIR` to its directory before
+`find_package(Zephyr)` in the application CMake file.
+
+## Tests
+
+From a configured Zephyr workspace,
+run the smoke tests with Twister:
+
+```sh
+west twister -p native_sim -T tests
+```

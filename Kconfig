@@ -1,1 +1,10 @@
 # SPDX-License-Identifier: Apache-2.0
+
+config TINYUSB
+	bool "TinyUSB library"
+	depends on MULTITHREADING
+	help
+	  Enable TinyUSB using the upstream TinyUSB Git submodule and its Zephyr
+	  OS adapter. Set TINYUSB_CONFIG_DIR in CMake to the application directory
+	  containing tusb_config.h. The application supplies USB configuration,
+	  controller drivers, and task scheduling.
