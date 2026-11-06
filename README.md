@@ -14,10 +14,10 @@ with submodule updates enabled:
 ```yaml
 manifest:
   projects:
-    - name: zephyr-tinyusb
+    - name: tinyusb
       url: https://github.com/alexandre-perrin/zephyr-tinyusb
       revision: main
-      path: modules/lib/zephyr-tinyusb
+      path: modules/lib/tinyusb
       submodules: true
 ```
 
